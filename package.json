@@ -1,10 +1,10 @@
 {
-  "name": "npm-base",
+  "name": "meteor-simple-schema-to-validate",
   "version": "1.0.0",
-  "description": "A base NPM package for writing a NPM package in ES2015",
+  "description": "Build validate functions for redux-form from Meteor SimpleSchema",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadirahq/npm-base.git"
+    "url": "https://github.com/zeroasterisk/meteor-simple-schema-to-validate.git"
   },
   "license": "MIT",
   "options": {
@@ -19,20 +19,22 @@
     "test-watch": "npm run testonly -- --watch --watch-extensions js"
   },
   "devDependencies": {
-    "nodemon": "1.7.x",
-    "mocha": "2.x.x",
-    "chai": "3.x.x",
-    "eslint": "1.7.x",
-    "babel-eslint": "4.x.x",
-    "eslint-plugin-babel": "2.x.x",
     "babel-cli": "6.x.x",
     "babel-core": "6.x.x",
+    "babel-eslint": "4.x.x",
+    "babel-plugin-lodash": "^3.0.0",
+    "babel-plugin-transform-runtime": "6.x.x",
     "babel-polyfill": "6.x.x",
     "babel-preset-es2015": "6.x.x",
     "babel-preset-stage-2": "6.x.x",
-    "babel-plugin-transform-runtime": "6.x.x"
+    "chai": "3.x.x",
+    "eslint": "1.7.x",
+    "eslint-plugin-babel": "2.x.x",
+    "mocha": "2.x.x",
+    "nodemon": "1.7.x"
   },
   "dependencies": {
-    "babel-runtime": "6.x.x"
+    "babel-runtime": "6.x.x",
+    "lodash": "^4.11.2"
   }
 }
