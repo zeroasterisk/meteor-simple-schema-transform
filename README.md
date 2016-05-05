@@ -8,7 +8,7 @@ and `functions` for use with a variety of form engines, validators, etc.
 # SST (SimpleSchemaTransform)
 
 A helper to turn a
-[Meteor SimpleSchema](https://github.com/aldeed/meteor-simple-schema)into...
+[Meteor SimpleSchema](https://github.com/aldeed/meteor-simple-schema) into...
 
 ### SST.forReduxForm.buildValidate
 
