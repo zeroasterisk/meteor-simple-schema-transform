@@ -10,7 +10,7 @@ and `functions` for use with a variety of form engines, validators, etc.
 A helper to turn a
 [Meteor SimpleSchema](https://github.com/aldeed/meteor-simple-schema)
 into a validate function for use with
-[ReduxForm (et. al.)](http://redux-form.com/)
+[ReduxForm](http://redux-form.com/)
 
 ```js
 // MyContainer
@@ -33,7 +33,13 @@ const validate = buildValidateForReduxForm(mySchema);
 
 export default createContainer(({ params }) => {
   // ....
+  saveData (data) {
+    Meteor.call('myMethod', data, (err) => {
+      if (err) console.error('Got Error on saveData', err);
+    });
+  }
   return {
+    saveData,
     validate
   }
 }, MyPage);
