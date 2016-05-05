@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {buildValidateForReduxForm} from '../';
+import SST from '../';
 const {describe, it} = global;
 
 const mockSimpleSchemaObj = {
@@ -29,18 +29,28 @@ const mockSimpleSchema = {
   }
 };
 
-describe('buildValidateForReduxForm', () => {
-  it('should be return a function', async () => {
-    expect(buildValidateForReduxForm).to.be.a('function');
+describe('SimpleSchemaTransform (SST)', () => {
+  it('should be an object', () => {
+    expect(SST).to.be.an('object');
   });
-  it('should add return a function', async () => {
-    const validate = await buildValidateForReduxForm(mockSimpleSchema);
-    expect(validate).to.be.a('function');
-  });
-  it('validate should return an errors object', async () => {
-    const validate = await buildValidateForReduxForm(mockSimpleSchema);
-    const result = validate({name: 'x'});
-    expect(result).to.be.an('object');
-    expect(result.name).to.equal('Some problem with name');
+  describe('forReduxForm', () => {
+    it('should be an object', () => {
+      expect(SST.forReduxForm).to.be.an('object');
+    });
+    describe('buildValidate', () => {
+      it('should be return a function', () => {
+        expect(SST.forReduxForm.buildValidate).to.be.a('function');
+      });
+      it('should add return a function', async () => {
+        const validate = await SST.forReduxForm.buildValidate(mockSimpleSchema);
+        expect(validate).to.be.a('function');
+      });
+      it('validate should return an errors object', async () => {
+        const validate = await SST.forReduxForm.buildValidate(mockSimpleSchema);
+        const result = validate({name: 'x'});
+        expect(result).to.be.an('object');
+        expect(result.name).to.equal('Some problem with name');
+      });
+    });
   });
 });

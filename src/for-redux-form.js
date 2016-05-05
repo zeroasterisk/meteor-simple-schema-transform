@@ -11,7 +11,7 @@ import _ from 'lodash';
  * @param object mySchemaObject eg: new SimpleSchema({...})
  * @return object errors eg: {} = valid, or {field: "reason"} = invalid
  */
-export const buildValidateForReduxForm = (mySchemaObject, contextName) => {
+export const buildValidate = (mySchemaObject, contextName) => {
   return values => {
     const context = mySchemaObject.namedContext(
       contextName ? contextName : 'myContext'
@@ -27,5 +27,4 @@ export const buildValidateForReduxForm = (mySchemaObject, contextName) => {
   };
 };
 
-export default buildValidateForReduxForm;
 

@@ -18,7 +18,7 @@ import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 import { MyPage } from '../pages/MyPage';
 
-import { buildValidateForReduxForm } from 'meteor-simple-schema-transform';
+import SST from 'meteor-simple-schema-transform';
 
 const mySchema = new SimpleSchema({
   name: {
@@ -29,7 +29,7 @@ const mySchema = new SimpleSchema({
   }
 });
 
-const validate = buildValidateForReduxForm(mySchema);
+const validate = SST.forReduxForm.buildValidate(mySchema);
 
 export default createContainer(({ params }) => {
   // ....
