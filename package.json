@@ -1,10 +1,10 @@
 {
-  "name": "meteor-simple-schema-to-validate",
+  "name": "meteor-simple-schema-transform",
   "version": "1.0.0",
   "description": "Build validate functions for redux-form from Meteor SimpleSchema",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zeroasterisk/meteor-simple-schema-to-validate.git"
+    "url": "https://github.com/zeroasterisk/meteor-simple-schema-transform.git"
   },
   "license": "MIT",
   "options": {
