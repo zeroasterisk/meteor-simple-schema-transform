@@ -5,11 +5,14 @@ Transform
 objects into other `objects`
 and `functions` for use with a variety of form engines, validators, etc.
 
-## buildValidateForReduxForm
+# SST (SimpleSchemaTransform)
 
 A helper to turn a
-[Meteor SimpleSchema](https://github.com/aldeed/meteor-simple-schema)
-into a validate function for use with
+[Meteor SimpleSchema](https://github.com/aldeed/meteor-simple-schema)into...
+
+### SST.forReduxForm.buildValidate
+
+.. into a validate function for use with
 [ReduxForm](http://redux-form.com/)
 
 ```js
