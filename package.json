@@ -1,6 +1,6 @@
 {
   "name": "meteor-simple-schema-transform",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build validate functions for redux-form from Meteor SimpleSchema",
   "repository": {
     "type": "git",
